@@ -1,0 +1,47 @@
+[
+  {
+    "id": "weak-1",
+    "label": "Vague, no context (weak baseline)",
+    "prompt": "Write a PRD for our new feature."
+  },
+  {
+    "id": "weak-3",
+    "label": "Underspecified ask (weak baseline)",
+    "prompt": "Can you look at our backlog and tell me what's important?"
+  },
+  {
+    "id": "glp1-flawed",
+    "label": "Competitive intel — looks complete, isn't (before)",
+    "prompt": "You're a market analyst for a pharma company evaluating entry into the GLP-1 obesity drug market. Research what our top 3 competitors (Novo Nordisk, Eli Lilly, Pfizer) are doing with their GLP-1 pipelines. Summarize their clinical trial progress, pricing strategy, and market positioning in a 2-page brief for our executive team, citing PubMed and recent SEC filings as sources."
+  },
+  {
+    "id": "glp1-refined",
+    "label": "Competitive intel — refined (after)",
+    "prompt": "You're a market analyst for a pharma company evaluating entry into the GLP-1 obesity drug market. Research what our top 3 competitors (Novo Nordisk, Eli Lilly, Pfizer) are doing with their GLP-1 pipelines. For each, summarize clinical trial progress (Phase 2 and later only, published or presented in the last 12 months), pricing strategy, and target patient population. Write a 2-page brief for our executive team that ends with an explicit go/no-go recommendation on market entry, not just a factual summary. Cite only peer-reviewed PubMed sources and SEC filings; if a claim comes from a company investor-day presentation rather than an independent source, label it as company-reported rather than treating it as verified. If two sources disagree on a material fact, flag the disagreement explicitly rather than picking one."
+  },
+  {
+    "id": "formulary-flawed",
+    "label": "Formulary memo — internal contradiction (before)",
+    "prompt": "Write a formulary recommendation memo for our Pharmacy and Therapeutics committee on whether to add semaglutide to our preferred drug list. Keep it under one page, but make sure you cover the full clinical evidence base, cost-effectiveness analysis, and utilization management considerations. Format as a formal memo."
+  },
+  {
+    "id": "formulary-refined",
+    "label": "Formulary memo — refined (after)",
+    "prompt": "Write a formulary recommendation memo for our Pharmacy and Therapeutics committee on whether to add semaglutide to our preferred drug list. The memo body must fit on one page: a recommendation up front, then a 2-3 sentence summary of each of clinical evidence, cost-effectiveness, and utilization management, citing only the single most decision-relevant study or figure per section. Put full supporting detail for each section in a labeled appendix, which is not subject to the one-page limit. Format as a formal memo with a clear Recommendation, Summary, and Appendix structure."
+  },
+  {
+    "id": "churn-json-mismatch",
+    "label": "Format specified but audience can't use it",
+    "prompt": "Analyze our churn data from the last 2 quarters and identify the top drivers. Output as a JSON object with driver names, statistical significance, and effect sizes, so our customer success team can act on it."
+  },
+  {
+    "id": "strong-1",
+    "label": "Context + audience + format + constraints (strong)",
+    "prompt": "We're a B2B SaaS project-management tool for mid-size marketing agencies (50-200 employees). Our churn analysis shows agencies with more than 3 active clients in the tool have 40% higher retention. Write a one-page PRD for a 'client approval' feature that lets agency clients approve deliverables directly in-app instead of over email, aimed at engineering leads who will scope the build. Use our standard PRD structure: Problem, Goals, Non-Goals, User Stories, Success Metrics, Open Questions. Keep it under 600 words and flag any assumption you're making explicitly as an Open Question rather than stating it as fact."
+  },
+  {
+    "id": "strong-2",
+    "label": "Stakeholder-specific messaging (strong)",
+    "prompt": "I need to tell our CEO we're delaying the mobile app launch by 3 weeks due to a critical payment-processing bug found in QA. Write a 150-word update for a Slack DM: state the delay and new date (October 14) in the first sentence, give one sentence on the cause, one sentence on what we're doing about it, and end with the business impact framed in terms of the Q4 launch commitment we made to the board. No apologetic tone — factual and confident. Do not mention the specific engineer who introduced the bug."
+  }
+]

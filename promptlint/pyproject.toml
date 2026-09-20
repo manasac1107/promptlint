@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "promptlint"
+version = "0.1.0"
+description = "Score a prompt against a fixed rubric before you send it."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Manasa Chadalavada" }]
+dependencies = [
+    "anthropic>=0.40.0",
+    "rich>=13.0.0",
+]
+
+[project.scripts]
+promptlint = "promptlint.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["promptlint*"]
